@@ -314,6 +314,8 @@ getJasmineRequireObj().Env = function(j$) {
 
     return suite;
   };
+  
+  Env.prototype.context = Env.prototype.describe;
 
   // TODO: move this to closure
   Env.prototype.xdescribe = function(description, specDefinitions) {
@@ -321,6 +323,8 @@ getJasmineRequireObj().Env = function(j$) {
     suite.disable();
     return suite;
   };
+
+  Env.prototype.xcontext = Env.prototype.xdescribe;
 
   // TODO: move this to closure
   Env.prototype.it = function(description, fn) {
